@@ -1,4 +1,8 @@
 body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+}
+h1 {
     text-align: center;
 }
 
@@ -8,13 +12,14 @@ hr {
 
 #error {
     color: darksalmon;
+    text-align: center;
 }
 
 #board {
     width: 450px;
     height: 450px;
 
-    background-color: beige;
+
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
@@ -23,7 +28,7 @@ hr {
 .tile {
     width: 48px;
     height: 48px;
-    border: 1px solid aqua;
+    border: 1px solid lightgrey;
 
     /* text */
     font-size: 20px;
@@ -37,16 +42,17 @@ hr {
     width: 450px;
     height: 50px;
 
-    background-color: beige;
+
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
 }
 
 .number {
-    width: 48px;
-    height: 48px;
+    width: 44px;
+    height: 44px;
     border: 1px solid black;
+    margin: 2px;
 
     /* text */
     font-size: 20px;
@@ -54,4 +60,20 @@ hr {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.number-selected {
+    background-color: gray;
+}
+
+.tile-start {
+    background-color: whitesmoke;
+}
+
+.horizontal-line {
+    border-bottom: 1px solid black;
+}
+
+.vertical-line {
+    border-right: 1px solid black;
 }
