@@ -41,6 +41,7 @@ var solution = [
 
 window.onload = function() {
     setGame();
+    document.getElementById("reset").addEventListener("click", resetBoard);
 }
 
 function setGame() {
@@ -101,6 +102,32 @@ function selectTile() {
         else {
             error += 1;
             document.getElementById("error").innerText = error;
+
+                if (error >= 10) {
+                    alert("You have reached max errors! Try again.")
+                    resetBoard();
+                }
+        }
+    }
+}
+
+function resetBoard() {
+    error = 0;
+    document.getElementById("error").innerText = error;
+
+    let tiles = document.querySelectorAll(".tile");
+    tiles.forEach(tile =>{
+        tile.innerText = "";
+        tile.classList.remove("number-selected");
+    });
+
+    for (let r = 0; r < 9; r++) {
+        for (let c = 0; c < 9; c++) {
+            let tile = document.getElementById(r.toString() + "-" + c.toString());
+            if (board[r][c] != "-"){
+                tile.innerText = board[r][c];
+                tile.classList.add("tile-start");
+            }
         }
     }
 }

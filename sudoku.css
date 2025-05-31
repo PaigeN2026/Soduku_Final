@@ -1,5 +1,5 @@
 body {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Franklin Gothic Medium';
     text-align: center;
 }
 h1 {
@@ -7,7 +7,7 @@ h1 {
 }
 
 hr {
-    width: 500px;
+    width: 1000px;
 }
 
 #error {
@@ -17,7 +17,7 @@ hr {
 
 #board {
     width: 432px;
-    height: 445px;
+    height: 413px;
     background-color: #fbeee6;
     color: white;
 
@@ -41,7 +41,7 @@ hr {
 
 #digits {
     width: 432px;
-    height: 46px;
+    height: 48px;
     background-color: #e1d0c0;
 
     text-align: center;
@@ -75,9 +75,29 @@ hr {
 }
 
 .horizontal-line {
-    border-bottom: 1px solid #fef9e7;
+    border-bottom: 2px solid #e1d0c0;
 }
 
 .vertical-line {
-    border-right: 1px solid #fef9e7;
+    border-right: 2px solid #e1d0c0;
+}
+
+#reset {
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+
+    width: 54px;
+    height: 34px;
+    font-size: 20px;
+    background-color: #fbeee6;
+    color: #e1d0c0;
+    border: 2px solid #e1d0c0;
+}
+
+#reset:hover {
+    background-color: #e1d0c0;
+    color: #fbeee6;
+    border: 2px solid #fbeee6;
 }
